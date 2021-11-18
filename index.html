@@ -4,17 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha pagina</title>
+    <title>Minha pagina</title>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <input id="cep" type="text">
-    <button type="button" onclick="consultaCep()">Consultar Cep</button>
-
-    <div id="logradouro"></div>
-    <div id="bairro"></div>
-    <div id="localidade"></div>
-    <div id="uf"></div>
-    <script src="js/script.js"></script>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand text-white">Navbar</a>
+            <div class="form-inline">
+              <input id="cep" class="form-control mr-sm-2" type="text" placeholder="Digite..." aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" onclick="consultaCep()">Consultar</button>
+            </div>
+          </nav>
+    </header>
+    
+    <div class="container">
+        <div class="progress barra-progresso">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row mt-4">
+            <h2 id="cep-titulo">CEP</h2>
+        </div>
+        <div class="row mt-5">
+            <table id="table" class="table">                
+                <tbody>
+                  <tr>                    
+                    <td>Logradouro</td>
+                    <td><div id="logradouro"></div></td>
+                    
+                  </tr>
+                  <tr>                    
+                    <td>Bairro</td>
+                    <td><div id="bairro"></div></td>
+                    
+                  </tr>   
+                  <tr>                    
+                    <td>Localidade</td>
+                    <td><div id="localidade"></div></td>                    
+                  </tr>  
+                  <tr>                    
+                    <td>Uf</td>
+                    <td><div id="uf"></div></td>                    
+                  </tr>               
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
 </body>
 </html>
